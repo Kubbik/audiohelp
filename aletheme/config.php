@@ -184,24 +184,9 @@ function aletheme_get_options() {
 						"id" => "ale_fb",
 						"std" => "",
 						"type" => "text");
-    $options[] = array( "name" => "Google+",
-                        "desc" => "Your google+ profile URL.",
-                        "id" => "ale_gog",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Pinterest",
-                        "desc" => "Your pinteres profile URL.",
-                        "id" => "ale_pint",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Flickr",
-                        "desc" => "Your flickr profile URL.",
-                        "id" => "ale_flickr",
-                        "std" => "",
-                        "type" => "text");
-    $options[] = array( "name" => "Linkedin",
+    $options[] = array( "name" => "Youtube",
                         "desc" => "Your linked profile URL.",
-                        "id" => "ale_linked",
+                        "id" => "ale_yt",
                         "std" => "",
                         "type" => "text");
     $options[] = array( "name" => "Instagram",
@@ -219,8 +204,6 @@ function aletheme_get_options() {
                         "id" => "ale_rssicon",
                         "std" => "1",
                         "type" => "checkbox");
-
-	
 	$options[] = array( "name" => "Facebook Application ID",
 						"desc" => "If you have Application ID you can connect the blog to your Facebook Profile and monitor statistics there.",
 						"id" => "ale_fb_id",

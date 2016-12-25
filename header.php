@@ -17,12 +17,14 @@
 			search
 		</div>
 		<div class="header_third logo_section">
-			<img src="<?php  echo ale_get_option("sitelogo"); ?>" />
+			<a href="<?php echo home_url("/"); ?>" ><img src="<?php  echo ale_get_option("sitelogo"); ?>"</a>
 		</div>
 		<div class="header_third social_section">
-			social
+			<?php if(ale_get_option("yt")){ ?><a href="<?php echo ale_get_option("yt"); ?>"><i class="fa fa-youtube-square" aria-hidden="true"></i></a><?php } ?>
+			<?php if(ale_get_option("insta")){ ?><a href="<?php echo ale_get_option("insta"); ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a><?php } ?>
+			<?php if(ale_get_option("twi")){ ?><a href="<?php echo ale_get_option("twi"); ?>"><i class="fa fa-twitter-square" aria-hidden="true"></i></a><?php } ?>
+			<?php if(ale_get_option("fb")){ ?><a href="<?php echo ale_get_option("fb"); ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a><?php } ?>
 		</div>
-
 	</div>
 </header>
 

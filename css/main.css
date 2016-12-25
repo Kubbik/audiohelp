@@ -29,3 +29,38 @@
   width: 33.3%;
   float: left;
 }
+.top_header .header_third .logo_section {
+  text-align: center;
+  line-height: 105px;
+  -webkit-transition: all 300ms easy-in-out;
+  -moz-transition: all 300ms easy-in-out;
+  -ms-transition: all 300ms easy-in-out;
+  -o-transition: all 300ms easy-in-out;
+  transition: all 300ms easy-in-out;
+}
+.top_header .header_third .logo_section:hover {
+  -moz-opacity: 0.6;
+  -khtml-opacity: 0.6;
+  -webkit-opacity: 0.6;
+  opacity: 0.6;
+  -webkit-transition: all 300ms easy-in-out;
+  -moz-transition: all 300ms easy-in-out;
+  -ms-transition: all 300ms easy-in-out;
+  -o-transition: all 300ms easy-in-out;
+  transition: all 300ms easy-in-out;
+}
+.top_header .header_third .social_section {
+  text-align: right;
+  font-size: 24px;
+  color: #d4dad9;
+  line-height: 105px;
+}
+.top_header .header_third .social_section a {
+  color: inherit;
+}
+.top_header .header_third .social_section a:hover {
+  color: #8c8c8c;
+}
+.top_header .header_third i {
+  margin-left: 30px;
+}
