@@ -3,7 +3,7 @@
 
 @color_grey: #d4dad9;
 @color_black_grey: #8c8c8c;
-
+@dark_color: #111111;
 /*Custom code*/
 
 .wrapper {
@@ -16,7 +16,7 @@
 
 .top_header {
   height: 105px;
-  background: #99ff4f;
+  background: #ffffff;
   position: relative;
 
   &::after {
@@ -28,22 +28,82 @@
     position: absolute;
     top: 100%;
   }
-
-.header_third {
+  .header_third {
     width: 33.3%;
     float: left;
 
-  & .logo_section {
+  &.search_section {
+    line-height: 105px;
+
+
+    .menu_icon {
+      display: inline-block;
+      float: left;
+      cursor: pointer;
+
+      i {
+        font-size: 20px;
+        color: @dark_color;
+      }
+    }
+    .search_box {
+      display: inline-block;
+      margin-left: 20px;
+      float: left;
+
+      #searchform fieldset {
+
+        &::before {
+          content: "\f002";
+          font: normal normal normal 14px/1 FontAwesome;
+          display: inline-block;
+          color: @color_grey;
+          margin-right: 6px;
+        }
+      }
+
+      #searchsubmit {
+        display: none;
+      }
+
+      input.searchinput {
+        border: none;
+        font-size: 12px;
+
+        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+          color: @color_grey;
+          font-size: 12px;
+          font-style: italic;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+          color: @color_grey;
+          font-size: 12px;
+          font-style: italic;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+          color: @color_grey;
+          font-size: 12px;
+          font-style: italic;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+          color: @color_grey;
+          font-size: 12px;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  &.logo_section {
     text-align: center;
     line-height: 105px;
     .transition(all 300ms easy-in-out);
 
     &:hover {
       .opacity(0.6);
-      .transition(all 300ms easy-in-out);
+      .transition(all 3100ms easy-in-out);
     }
   }
-      & .social_section {
+      &.social_section {
         text-align: right;
         font-size: 24px;
         color: @color_grey;

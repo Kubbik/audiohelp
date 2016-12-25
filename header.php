@@ -8,16 +8,16 @@
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	<?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?> >
+<body <?php body_class(); ?>>
 
 <header class="top_header">
-	<div class="wrapper">
-		<div class="header_third search_section menu_bottom">
-			search
+	<div class="wrapper cf">
+		<div class="header_third search_section menu_button cf">
+            <div class="menu_icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div class="search_box"><?php echo get_search_form(); ?></div>
 		</div>
 		<div class="header_third logo_section">
-			<a href="<?php echo home_url("/"); ?>" ><img src="<?php  echo ale_get_option("sitelogo"); ?>"</a>
+			<a href="<?php echo home_url("/"); ?>" class="top_link"><img src="<?php  echo ale_get_option("sitelogo"); ?>"/></a>
 		</div>
 		<div class="header_third social_section">
 			<?php if(ale_get_option("yt")){ ?><a href="<?php echo ale_get_option("yt"); ?>"><i class="fa fa-youtube-square" aria-hidden="true"></i></a><?php } ?>
