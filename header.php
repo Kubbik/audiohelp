@@ -13,11 +13,15 @@
 
 <header class="top_header">
 	<div class="wrapper">
-		<div class="header_third menu_bottom"></div>
+		<div class="header_third search_section menu_bottom">
+			search
+		</div>
 		<div class="header_third logo_section">
 			<img src="<?php  echo ale_get_option("sitelogo"); ?>" />
 		</div>
-		<div class="header_third social_section"></div>
+		<div class="header_third social_section">
+			social
+		</div>
 
 	</div>
 </header>

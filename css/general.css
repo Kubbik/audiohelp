@@ -572,4 +572,5 @@ html[xmlns] .slides {
 }
 .top_header .header_third {
   width: 33.3%;
+  float: left;
 }
