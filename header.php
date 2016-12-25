@@ -40,6 +40,9 @@
                 ));
             }
             ?>
+            <div class="donate_button">
+                <a href="<?php //echo ale_get_option("donate_link"); ?>"><?php _e("Donate", "audiohelp"); ?></a>
+            </div>
         </div>
     </nav>
 </header>
