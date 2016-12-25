@@ -5,7 +5,9 @@
   -ms-column-break-inside: avoid;
   display: table;
 }
-/* Your Custom code here */
-div.example {
-  color: #fff;
+/*Custom code*/
+.wrapper {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
 }

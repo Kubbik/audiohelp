@@ -550,7 +550,9 @@ html[xmlns] .slides {
 * html .slides {
   height: 1%;
 }
-/* Your Custom code here */
-div.example {
-  color: #fff;
+/*Custom code*/
+.wrapper {
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
 }
