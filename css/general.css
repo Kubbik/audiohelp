@@ -603,6 +603,51 @@ html[xmlns] .slides {
   margin-left: 2px;
   /*Определяем первый li*/
 }
+.top_header .top_navigation .ale_headermenu li .sub-menu {
+  background: #ffffff;
+  color: #8c8c8c;
+  width: 140px;
+  border-top: 3px solid #eedf9c;
+  margin-top: -3px;
+  padding: 25px;
+  position: relative;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  margin-top: -7px;
+  /*Код треугольника*/
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 3.5px 4px 3.5px;
+  border-color: transparent transparent #eedf9c transparent;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li {
+  color: #8c8c8c;
+  font-size: 13px;
+  display: block;
+  height: 40px;
+  line-height: 40px;
+  float: none;
+  width: 100%;
+  border-bottom: 1px solid #d4dad9;
+  margin: 0;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li:last-child {
+  border-bottom: 0;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li a {
+  color: inherit;
+  height: auto;
+  padding: 0;
+  display: inline-block;
+  line-height: 40px;
+}
 .top_header .top_navigation .ale_headermenu li.current_page_item a {
   color: #eedf9c;
 }
