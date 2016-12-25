@@ -26,6 +26,22 @@
 			<?php if(ale_get_option("fb")){ ?><a href="<?php echo ale_get_option("fb"); ?>"><i class="fa fa-facebook-official" aria-hidden="true"></i></a><?php } ?>
 		</div>
 	</div>
+    /*Навигация*/
+    <nav class="top_navigation">
+        <div class="wrapper">
+            <?php
+            if ( has_nav_menu( 'header_menu' ) ) {
+                wp_nav_menu(array(
+                    'theme_location'=> 'header_menu',
+                    'menu'			=> 'Header Menu',
+                    'menu_class'	=> 'ale_headermenu cf',
+                    'walker'		=> new Aletheme_Nav_Walker(),
+                    'container'		=> '',
+                ));
+            }
+            ?>
+        </div>
+    </nav>
 </header>
 
 <section class="home_slider">

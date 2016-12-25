@@ -20,11 +20,11 @@
             <ul class="nav">
                 <li><span><?php echo ale_get_option('footermenutitle'); ?></span>
                     <?php
-                    if ( has_nav_menu( 'footer_menu' ) ) {
+                    if ( has_nav_menu( 'header_menu' ) ) {
                         wp_nav_menu(array(
-                            'theme_location'=> 'footer_menu',
-                            'menu'			=> 'Footer Menu',
-                            'menu_class'	=> 'footermenu cf',
+                            'theme_location'=> 'header_menu',
+                            'menu'			=> 'Header Menu',
+                            'menu_class'	=> 'ale_headermenu cf',
                             'walker'		=> new Aletheme_Nav_Walker(),
                             'container'		=> '',
                         ));
