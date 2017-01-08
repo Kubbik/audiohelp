@@ -80,7 +80,7 @@
           padding-top: 25px;
           padding-bottom: 25px;
           position: relative;
-          //display: none;
+          display: none;
 
           &::before {
             content: "";
@@ -110,9 +110,9 @@
 
             margin: 0;
 
-            .menu-item-has-children {
+            &.menu-item-has-children {
               &::after {
-                content: "\f054";
+                content: "\f2cd";
                 font: normal normal normal 6px/1 FontAwesome;
                 position: absolute;
                 top: 50%;
@@ -123,7 +123,6 @@
             }
 
             &:hover {
-
               .sub-menu {
                 display: block;
               }
@@ -135,9 +134,9 @@
               top: 0;
               border: 0;
               border-left: 2px solid #f7f7f7;
-
+              display: none;
               &::before {
-                //display: none;
+                display: none;
               }
             }
 
@@ -313,6 +312,8 @@
 
           &:hover {
             color: @color_black_grey;
+
+
           }
         }
       }

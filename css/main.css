@@ -71,6 +71,7 @@
   padding-top: 25px;
   padding-bottom: 25px;
   position: relative;
+  display: none;
 }
 .top_header .top_navigation .ale_headermenu li .sub-menu::before {
   content: "";
@@ -97,8 +98,8 @@
   width: 100%;
   margin: 0;
 }
-.top_header .top_navigation .ale_headermenu li .sub-menu li .menu-item-has-children::after {
-  content: "\f054";
+.top_header .top_navigation .ale_headermenu li .sub-menu li.menu-item-has-children::after {
+  content: "\f2cd";
   font: normal normal normal 6px/1 FontAwesome;
   position: absolute;
   top: 50%;
@@ -115,6 +116,10 @@
   top: 0;
   border: 0;
   border-left: 2px solid #f7f7f7;
+  display: none;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li .sub-menu::before {
+  display: none;
 }
 .top_header .top_navigation .ale_headermenu li .sub-menu li:last-child a {
   border-bottom: 0;
