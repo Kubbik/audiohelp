@@ -43,10 +43,22 @@ function aletheme_get_options() {
                         "std" => "",
                         "type" => "upload");
 
+    $options[] = array( "name" => "Home Page Slider slug",
+                        "desc" => "Insert the slider slug. Get the slug on Sliders Section",
+                        "id" => "ale_homesliderslug",
+                        "std" => "",
+                        "type" => "text");
+
     $options[] = array( 'name' => "Manage Background",
                         'desc' => "Select the background color, or upload a custom background image. Default background is the #f5f5f5 color",
                         'id' => 'ale_background',
                         'std' => $background_defaults,
+                        'type' => 'background');
+
+    $options[] = array( 'name' => "Insert The Slider Slug",
+                        'desc' => "Get the slug on the Sliders Settings Page",
+                        'id' => 'ale_background',
+                        'std' => 600,
                         'type' => 'background');
 
     $options[] = array( "name" => "Show Site Preloader",
@@ -61,20 +73,20 @@ function aletheme_get_options() {
                         "std" => "",
                         "type" => "upload");
 
-	$options[] = array( "name" => "Comments Style",
+    $options[] = array( "name" => "Comments Style",
 						"desc" => "Choose your comments style. If you want to use DISQUS comments please install and activate this plugin from <a href=\"" . admin_url('plugin-install.php?tab=search&type=term&s=Disqus+Comment+System&plugin-search-input=Search+Plugins') . "\">Wordpress Repository</a>.  If you want to use Livefyre Realtime Comments comments please install and activate this plugin from <a href=\"" . admin_url('plugin-install.php?tab=search&type=term&s=Livefyre+Realtime+Comments&plugin-search-input=Search+Plugins') . "\">Wordpress Repository</a>.",
 						"id" => "ale_comments_style",
 						"std" => "wp",
 						"type" => "select",
 						"options" => $comments_style);
 
-	$options[] = array( "name" => "AJAX Comments",
+    $options[] = array( "name" => "AJAX Comments",
 						"desc" => "Use AJAX on comments posting (works only with Alethemes Comments selected).",
 						"id" => "ale_ajax_comments",
 						"std" => "1",
 						"type" => "checkbox");
 
-	$options[] = array( "name" => "Social Sharing",
+    $options[] = array( "name" => "Social Sharing",
 						"desc" => "Enable social sharing for posts.",
 						"id" => "ale_social_sharing",
 						"std" => "1",
@@ -86,11 +98,6 @@ function aletheme_get_options() {
                         "std" => "",
                         "type" => "editor");
 
-    $options[] = array( "name" => "Home Page Slider slug",
-                        "desc" => "Insert the slider slug. Get the slug on Sliders Section",
-                        "id" => "ale_homeslugfull",
-                        "std" => "",
-                        "type" => "text");
 
     $options[] = array( "name" => "Blog Slider slug",
                         "desc" => "Insert the slider slug. Get the slug on Sliders Section",
@@ -107,13 +114,6 @@ function aletheme_get_options() {
                         "std" => "Raleway",
                         "type" => "select",
                         "options" => $headerfont);
-
-    $options[] = array( "name" => "Select the body Font (Extended) from Google Library",
-                        "desc" => "The default Font (extended) is - 600",
-                        "id" => "ale_headerfontex",
-                        "std" => "600",
-                        "type" => "text",
-                        );
 
     $options[] = array( "name" => "Select the Headers Font from Google Library",
                         "desc" => "The default Font is - Libre Baskerville",

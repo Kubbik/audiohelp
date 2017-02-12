@@ -13,18 +13,15 @@
 }
 /*Header styles*/
 .top_header {
-  height: 105px;
+  height: 195px;
   background: #ffffff;
   position: relative;
 }
 .top_header .top_navigation {
-  position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   height: 90px;
-  background-color: #111111;
-  z-index: 99;
 }
 .top_header .top_navigation .donate_button {
   float: right;
@@ -34,12 +31,12 @@
 .top_header .top_navigation .donate_button a {
   height: 87px;
   display: block;
-  color: #eedf9c;
+  color: #c52312;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 90px;
   text-transform: uppercase;
-  border-bottom: 3px solid #eedf9c;
+  border-bottom: 3px solid #c52312;
   font-weight: 600;
 }
 .top_header .top_navigation .ale_headermenu {
@@ -50,7 +47,7 @@
 .top_header .top_navigation .ale_headermenu li {
   display: inline-block;
   float: left;
-  color: #ffffff;
+  color: #000000;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   height: 90px;
@@ -66,7 +63,7 @@
   color: #8c8c8c;
   width: 140px;
   box-sizing: border-box;
-  border-top: 3px solid #eedf9c;
+  border-top: 3px solid #9faea0;
   margin-top: -3px;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -79,13 +76,6 @@
   left: 50%;
   margin-left: -3px;
   margin-top: -7px;
-  /*Код треугольника*/
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 3.5px 4px 3.5px;
-  border-color: transparent transparent #eedf9c transparent;
 }
 .top_header .top_navigation .ale_headermenu li .sub-menu li {
   color: #8c8c8c;
@@ -104,7 +94,10 @@
   top: 50%;
   left: 80%;
   margin-top: 3px;
-  color: #eedf9c;
+  color: #9faea0;
+}
+.top_header .top_navigation .ale_headermenu li .sub-menu li:hover .sub-menu {
+  display: block;
 }
 .top_header .top_navigation .ale_headermenu li .sub-menu li .sub-menu {
   position: absolute;
@@ -112,7 +105,6 @@
   top: 0;
   border: 0;
   border-left: 2px solid #f7f7f7;
-  display: none;
 }
 .top_header .top_navigation .ale_headermenu li .sub-menu li .sub-menu::before {
   display: none;
@@ -146,7 +138,7 @@
   transition: all 300ms ease-in-out;
 }
 .top_header .top_navigation .ale_headermenu li.current_page_item a {
-  color: #eedf9c;
+  color: #9faea0;
 }
 .top_header .top_navigation .ale_headermenu li::after {
   content: "\f111";
@@ -178,7 +170,7 @@
   transition: all 300ms ease-in-out;
 }
 .top_header .top_navigation .ale_headermenu li a:hover {
-  color: #eedf9c;
+  color: #9faea0;
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   -ms-transition: all 300ms ease-in-out;

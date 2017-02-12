@@ -15,6 +15,12 @@ jQuery(function($) {
         controlNav: false
     });
 
+    $('.flexslider').flexslider({
+        animation:'slide',
+        smoothHeight:true,
+        controlNav: false
+    });
+
 });
 
 Modernizr.addTest('ipad', function () {
