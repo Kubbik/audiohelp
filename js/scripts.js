@@ -17,9 +17,12 @@ jQuery(function($) {
 
     $('.flexslider').flexslider({
         animation:'slide',
-        smoothHeight:true,
+        //smoothHeight:true,
+        prevText:"<i class=\"fa fa-chevron-left\" aria-hidden=\"true\"></i>",
+        nextText:"<i class=\"fa fa-chevron-right\" aria-hidden=\"true\"></i>",
         controlNav: false
     });
+
 
 });
 

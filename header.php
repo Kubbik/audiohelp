@@ -6,12 +6,13 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
 <header class="top_header">
-	<div class="wrapper">
+	<div class="wrapper cf">
 		<div class="header_third search_section menu_button cf">
 <!--<div class="menu_icon"><i class="fa fa-bars" aria-hidden="true"></i></div>-->
             <div class="search_box"><?php echo get_search_form(); ?></div>

@@ -391,11 +391,11 @@ class Aletheme_Sliders
 					slideshow: <?php echo $slideshow ? 'true' : 'false' ?>,
 					controlNav: <?php echo $controlnav ? 'true' : 'false' ?>,
 					randomize: <?php echo $randomize ? 'true' : 'false' ?>,
-					animationLoop: true,
+					animationLoop: false,
 					smoothHeight: true,
 					multipleKeyboard:true,
 					video:true,
-					start: function(slider){
+        			start: function(slider){
 						slider.removeClass('loading');
 					}
 				});

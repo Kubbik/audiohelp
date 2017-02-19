@@ -4,7 +4,7 @@
   * */
 get_header(); ?>
 
-<section class="home_slider">
+<section class="home_slider cf">
     <div class="flexslider">
         <ul class="slides">
             <?php $slider = ale_sliders_get_slider(ale_get_option('homesliderslug')); ?>
@@ -20,7 +20,7 @@ get_header(); ?>
                                 <?php if($slide['title']){ echo '<span class="mainslidertitle">'.$slide['title'].'</span>'; } ?><br />
                                 <?php if($slide['description']) { echo '<span class="mainsliderdesc">'.$slide['description'].'</span>'; } ?><br />
                                 <?php if($slide['url']){echo '<a href="'.$slide['url'].'" class=sliderlinkmore>'.__('Читать далее', 'aletheme').'</a>'; } ?>
-                        </figcaption>
+                            </figcaption>
                         <?php } ?>
                         </figure>
                     </li>
