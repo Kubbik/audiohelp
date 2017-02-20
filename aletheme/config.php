@@ -109,11 +109,18 @@ function aletheme_get_options() {
                         "type" => "heading");
 
     $options[] = array( "name" => "Select the body Font from Google Library",
-                        "desc" => "The default Font is - Raleway",
+                        "desc" => "The default Font is - Droid Serif",
                         "id" => "ale_headerfont",
-                        "std" => "Raleway",
+                        "std" => "Droid+Serif",
                         "type" => "select",
                         "options" => $headerfont);
+
+    $options[] = array( "name" => "Select the body Font from Google Library",
+                        "desc" => "The default Font (extended) is - 600",
+                        "id" => "ale_headerfont",
+                        "std" => "400,400i,700,700i",
+                        "type" => "text"
+                        );
 
     $options[] = array( "name" => "Select the Headers Font from Google Library",
                         "desc" => "The default Font is - Libre Baskerville",
@@ -293,302 +300,58 @@ function aletheme_metaboxes($meta_boxes) {
 
 
     $meta_boxes[] = array(
-        'id'         => 'home_page_metabox',
-        'title'      => 'Home Meta Options',
+        'id'         => 'contacts_page_metabox',
+        'title'      => 'Contacts Options',
         'pages'      => array( 'page', ), // Post type
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
-        'show_on'    => array( 'key' => 'page-template', 'value' => array('page-home.php'), ), // Specific post templates to display this metabox
+        'show_on'    => array( 'key' => 'page-template', 'value' => array('template-contact.php'), ), // Specific post templates to display this metabox
 
         'fields' => array(
             array(
-                'name' => 'First Description',
+                'name' => __('Phone Label','aletheme'),
                 'desc' => 'Insert the text',
-                'id'   => $prefix . 'descr1',
-                'type' => 'textarea',
-            ),
-            array(
-                'name' => 'Second Description',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'descr2',
+                'std'  => 'Телефон',
+                'id'   => $prefix . 'phone_label',
                 'type' => 'text',
             ),
             array(
-                'name' => 'File Upload',
+                'name' => __('Phone Number','aletheme'),
                 'desc' => 'Insert the text',
-                'id'   => $prefix . 'fileupload',
-                'type' => 'file',
+                'id'   => $prefix . 'phone_number',
+                'type' => 'text',
             ),
             array(
-                'name' => 'Text Date',
+                'name' => __('Address Label','aletheme'),
                 'desc' => 'Insert the text',
-                'id'   => $prefix . 'datefield',
-                'type' => 'wysiwyg',
+                'std'  => 'Адрес',
+                'id'   => $prefix . 'address_label',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Address','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'address',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Email Label','aletheme'),
+                'desc' => 'Insert the text',
+                'std'  => 'Email',
+                'id'   => $prefix . 'email_label',
+                'type' => 'text',
+            ),
+            array(
+                'name' => __('Email','aletheme'),
+                'desc' => 'Insert the text',
+                'id'   => $prefix . 'Email',
+                'type' => 'text',
             ),
         )
     );
 
-    $meta_boxes[] = array(
-        'id'         => 'press_page_metabox',
-        'title'      => 'Press Page Options',
-        'pages'      => array( 'page', ), // Post type
-        'context'    => 'normal',
-        'priority'   => 'high',
-        'show_names' => true, // Show field names on the left
-        'show_on'    => array( 'key' => 'page-template', 'value' => array('template-press.php'), ), // Specific post templates to display this metabox
-        'fields' => array(
-            array(
-                'name' => 'Press title #1',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit1',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #1',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb1',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #1',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage1',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #1',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo1',
-                'type' => 'text',
-            ),
 
-            array(
-                'name' => 'Press title #2',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit2',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #2',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb2',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #2',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage2',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #2',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo2',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #3',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit3',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #3',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb3',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #3',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage3',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #3',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo3',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #4',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit4',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #4',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb4',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #4',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage4',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #4',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo4',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #5',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit5',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #5',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb5',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #5',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage5',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #5',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo5',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #6',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit6',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #6',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb6',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #6',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage6',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #6',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo6',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #7',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit7',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #7',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb7',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #7',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage7',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #7',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo7',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #8',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit8',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #8',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb8',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #8',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage8',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #8',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo8',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #9',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit9',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #9',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb9',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #9',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage9',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #9',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo9',
-                'type' => 'text',
-            ),
-
-            array(
-                'name' => 'Press title #10',
-                'desc' => 'Insert the title',
-                'id'   => $prefix . 'presstit10',
-                'type' => 'text',
-            ),
-            array(
-                'name' => 'Press Thumb #10',
-                'desc' => 'Insert the image (max-height - 280px)',
-                'id'   => $prefix . 'pressthumb10',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Image #10',
-                'desc' => 'Insert the image or let it empty if you want to use a video.',
-                'id'   => $prefix . 'pressimage10',
-                'type' => 'file',
-            ),
-            array(
-                'name' => 'Press Video link #10',
-                'desc' => 'Insert the video or let it empty if you want to use an image. (Embed link - ex //www.youtube.com/embed/LtulTGxJdDc)',
-                'id'   => $prefix . 'pressvideo10',
-                'type' => 'text',
-            ),
-        )
-    );
 
 
     $meta_boxes[] = array(

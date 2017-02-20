@@ -7,6 +7,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -45,7 +46,12 @@
             </div>
         </nav>
 	</div>
-<!--Навигация-->
-
 </header>
 
+<?php if(!is_page_template("page.php")); ?>
+<section class="inner_header">
+    <div class="wrapper">
+        <?php echo get_breadcrumbs(); ?>
+    </div>
+</section>
+<?php ?>
