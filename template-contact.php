@@ -12,7 +12,7 @@ get_header();
 <div class="container contacts">
     <div class="wrapper">
         <h2 class="page_title">
-            <?php the_title(); ?>
+
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         </h2>
         <div class="page_content">
@@ -33,17 +33,44 @@ get_header();
                     <span class="value"><a href="mailto:<?php echo ale_get_meta('Email'); ?>"><?php echo ale_get_meta('Email'); ?></a></span>
                 </div>
             </div>
-        <div class="form">
-            <input name="contact[name]" type="text" placeholder="Your Name (required)" value="<?php echo isset($_POST['contact']['name']) ? $_POST['contact']['name'] : ''?>" required="required" id="contact-form-name" />
-            <input name="contact[email]" type="email" placeholder="Email (required)" value="<?php echo isset($_POST['contact']['email']) ? $_POST['contact']['email'] : ''?>" required="required" id="contact-form-email" />
-            <input name="contact[phone]" type="text" placeholder="Phone (required)" value="<?php echo isset($_POST['contact']['phone']) ? $_POST['contact']['phone'] : ''?>" required="required" id="contact-form-phone" />
-            <input name="contact[genre]" type="text" placeholder="Genre (required)" value="<?php echo isset($_POST['contact']['genre']) ? $_POST['contact']['genre'] : ''?>" required="required" id="contact-form-genre" />
+            <div class="contact_form">
+            <div class="inner_page_title">
+                <h3 class="inner_title font_three"><?php echo ('Контакты'); ?></h3>
+            </div>
+            <form method="post" action="<?php the_permalink(); ?>">
+                <?php if (isset($_GET['успех'])) : ?>
+                    <p class="success"><?php ('Спасибо за ваше сообщение')?></p>
+            <?php endif; ?>
+            <?php if (isset($error) && isset($error['msg'])) : ?>
+                <p class="error"><?php echo $error['msg']?></p>
+            <?php endif;?>
 
-            <textarea name="contact[message]"  placeholder="Your Message (required)"id="contact-form-message" required="required"><?php echo isset($_POST['contact']['message']) ? $_POST['contact']['message'] : ''?></textarea>
-            <input type="submit" class="submit" value="<?php _e('Submit', 'aletheme')?>"/>
-        </div>
-        <?php wp_nonce_field() ?>
-        </form>
+            <div class="item_line cf">
+                <?php if(ale_get_meta('address')){
+
+                    echo do_shortcode('[contact-form-7 id="90" title="Контактная форма"]');
+
+                }?>
+
+                 <!--<div class="item_input">
+                    <input name="contact[name]" type="text" placeholder="Ваше имя (обязательно)" value="<?php /*echo isset($_POST['contact']['name']) ? $_POST['contact']['name'] : ''*/?>" required="required" id="contact-form-name" />
+                </div>
+                <div class="item_input">
+                    <input name="contact[phone]" type="text" placeholder="Телефон (обязательно)" value="<?php /*echo isset($_POST['contact']['phone']) ? $_POST['contact']['phone'] : ''*/?>" required="required" id="contact-form-phone" />
+                </div>
+                <div class="item_input">
+                    <input name="contact[email]" type="email" placeholder="Email (обязательно)" value="<?php /*echo isset($_POST['contact']['email']) ? $_POST['contact']['email'] : ''*/?>" required="required" id="contact-form-email" />
+                </div>
+            </div>
+            <div class="item_line">
+                <textarea name="contact[message]"  placeholder="Текст сообщения"id="contact-form-message" required="required"><?php /*echo isset($_POST['contact']['message']) ? $_POST['contact']['message'] : ''*/?></textarea>
+            </div>
+            <div class="item_line">
+                <input type="submit" class="submit" value="<?php /*_e('Отправить', 'aletheme')*/?>"/>
+            </div>-->
+            </div>
+            <?php wp_nonce_field() ?>
+            </form>
     </div>
 </div>
 <!--
