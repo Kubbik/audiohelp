@@ -39,8 +39,15 @@
                     <?php } ?>
                 </div>
                 <div class="twitter footer_inner">
-                    <h5>twitter</h5>
-                    Будет вконтакте
+                    <h5>Вконтакте</h5>
+                    <?php get_sidebar('footer');?>
+                    <script type="text/javascript" src="//vk.com/js/api/openapi.js?142"></script>
+
+                    <!-- VK Widget -->
+                    <div id="vk_groups"></div>
+                    <script type="text/javascript">
+                        VK.Widgets.Group("vk_groups", {mode: 1, width: "319"}, 70633946);
+                    </script>
                 </div>
             </div>
         </div>

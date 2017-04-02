@@ -73,7 +73,5 @@ get_header();
             </form>
     </div>
 </div>
-<!--
-
 
 <?php get_footer(); ?>

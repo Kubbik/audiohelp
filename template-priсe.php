@@ -6,8 +6,7 @@
 if (isset($_POST['contact'])) {
     $error = ale_send_contact($_POST['contact']);
 }
-get_header();
-?>
+get_header();?>
 
     <div class="container contacts">
         <div class="wrapper">
@@ -21,7 +20,5 @@ get_header();
 
         </div>
     </div>
-    <!--
 
-
-    <?php get_footer(); ?>
+<?php get_footer(); ?>
