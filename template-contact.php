@@ -71,7 +71,7 @@ get_header();
             </div>
             <?php wp_nonce_field() ?>
             </form>
-    </div>
+            </div>
 </div>
 
 <?php get_footer(); ?>
